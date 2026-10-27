@@ -1,0 +1,48 @@
+/* Common styles shared by all pages. Load after Bootstrap. */
+
+:root {
+  --site-dark: #212529;
+  --site-primary: #0d6efd;
+  /* Pages can override this to give their hero a different colour */
+  --hero-gradient: linear-gradient(135deg, var(--site-dark) 0%, var(--site-primary) 100%);
+}
+
+/* Keep anchor targets visible below the sticky navbar */
+html {
+  scroll-padding-top: 70px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Hero header */
+.hero {
+  background: var(--hero-gradient);
+}
+
+/* Large icons used on cards and sections */
+.topic-icon,
+.section-icon {
+  font-size: 2.5rem;
+}
+
+.author-icon {
+  font-size: 3.5rem;
+}
+
+/* Cards lift slightly on hover */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
